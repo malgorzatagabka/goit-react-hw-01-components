@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/malgorzatagabka/goit-react-hw-01-components/static/css/main.b5320759.css",
+    "main.js": "/malgorzatagabka/goit-react-hw-01-components/static/js/main.07d3183d.js",
+    "index.html": "/malgorzatagabka/goit-react-hw-01-components/index.html",
+    "main.b5320759.css.map": "/malgorzatagabka/goit-react-hw-01-components/static/css/main.b5320759.css.map",
+    "main.07d3183d.js.map": "/malgorzatagabka/goit-react-hw-01-components/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5320759.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
