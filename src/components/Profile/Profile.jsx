@@ -1,28 +1,25 @@
 import PropTypes from 'prop-types';
-// import Profile from './profile.module.css';
+import Profile from './profile.module.css';
 
 export const UserProfile = ({ username, tag, location, avatar, stats }) => (
-  <div className="profile">
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">{tag}</p>
-      <p className="location">{location}</p>
+  <div className={Profile.profile}>
+    <div className={Profile.description}>
+      <img src={avatar} alt="User avatar" className={Profile.avatar} />
+      <p className={Profile.name}>{username}</p>
+      <p className={Profile.tag}>@{tag}</p>
+      <p className={Profile.location}>{location}</p>
     </div>
-
-    <ul className="stats">
-      <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{stats.followers}</span>
-      </li>
-      <li>
-        <span className="label">Views</span>
-        <span className="quantity">{stats.views}</span>
-      </li>
-      <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{stats.likes}</span>
-      </li>
+    <ul className={Profile.stats}>
+      {[
+        [1, 'Followers', stats.followers],
+        [2, 'Views', stats.views],
+        [3, 'Likes', stats.likes],
+      ].map(([id, text, value]) => (
+        <li key={id} className ={Profile.item}>
+          <span className={Profile.label}>{text}</span>
+          <span className={Profile.quantity}>{value}</span>
+        </li>
+      ))}
     </ul>
   </div>
 );
@@ -36,5 +33,5 @@ UserProfile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  })
+  }),
 };
