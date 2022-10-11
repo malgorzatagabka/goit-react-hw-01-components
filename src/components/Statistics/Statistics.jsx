@@ -6,7 +6,7 @@ export const UserStats = ({ title, stats }) => {
     <section className={Stats.statistics}>
           { title && <h2 class={Stats.title}>{title}</h2>}
       <ul className={Stats.statList}>
-        {stats.map(({ id, label, percentage }, index) => (
+        {stats.map(({ id, label, percentage }) => (
          <li className={Stats.item} key={id} style={{ backgroundColor:colorHex }}>
             <span className={Stats.label}>{label}</span>
             <span className={Stats.percentage}>{percentage}%</span>
